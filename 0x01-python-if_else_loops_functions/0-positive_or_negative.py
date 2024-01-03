@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10, 10)
-# YOUR CODE HERE
-#Ask user to enter number
-number = input("Enter any number ")
-
 #If number is greater than zero
 if number > 0
    print("{} is positive".format(number))

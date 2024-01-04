@@ -11,5 +11,5 @@ elif number == 0:
 
 #If number is less than zero
 elif number < 0:
-   print("{} is less than zero\n".format(number))
+   print("{} is negative\n".format(number))
 

@@ -1,4 +1,5 @@
 #!/bin/bash
+
 PYCODE=$(cat <<EOF 
 print(f"Best School: {88+10}") 
 EOF

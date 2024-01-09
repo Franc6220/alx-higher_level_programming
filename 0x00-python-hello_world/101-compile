@@ -1,0 +1,2 @@
+#!/usr/bin/python3
+export PYFILE=my_main.py => output filename: my_main.pyc

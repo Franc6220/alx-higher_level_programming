@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def fizzbuzz():
   for a in range(1, 100):
+      print("{}".format(a))
       if a % 3 == 0 and a % 5 != 0:
          print("Fizz ", end = '')
       elif a % 5 == 0 and a % 3 != 0:

@@ -7,4 +7,5 @@ def fizzbuzz():
          print("Buzz ", end = '')
       elif a % 3 == 0 and a % 5 == 0:
          print("FizzBuzz ", end = '')
-      
+  else:
+       print(f'{a}', end = '')      

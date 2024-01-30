@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 """0-rectangle folder for empty class """
 
-Class Rectangle:
+class Rectangle:
 """ Empty class that defines a rectangle """
 
-pass
+pass       #An empty block
+
+
+r = Rectangle()
+
+print(r)

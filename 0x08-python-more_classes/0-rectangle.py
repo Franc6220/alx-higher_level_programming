@@ -4,7 +4,7 @@
 class Rectangle:
 """ Empty class that defines a rectangle """
 
-pass       #An empty block
+      pass       #An empty block
 
 
 r = Rectangle()

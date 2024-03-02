@@ -1,2 +1,2 @@
-#!/usr/bin/python3
-export PYFILE=my_main.py => output filename: my_main.pyc
+#!/bin/bash
+python3 -c "import py_compile; py_compile('$PYFILE', '$PYFILE' + 'c')"

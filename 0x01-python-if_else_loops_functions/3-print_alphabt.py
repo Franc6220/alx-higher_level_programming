@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-if alpha_letters in [101,103]:
-   print(*["%c" % a for a in range(ord('a'),ord('z')+1) if "%c" % a not in (ord('q'),ord('e')],sep = '',end = '')
+for i in range (97,123):
+    if i in [101,113]:
+        continue
+    print("{}".format(chr(i)),end='')

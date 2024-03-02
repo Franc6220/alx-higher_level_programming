@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-if a == 0 and a <= 98:
-   print("{}".format(a))
+for i in range(0,99):
+    print("{} = {}".format(i, hex(i)))

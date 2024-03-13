@@ -1,2 +1,2 @@
-- - script listing all database of SQL server
+-- Lists all databases of the MySQL server.
 SELECT *

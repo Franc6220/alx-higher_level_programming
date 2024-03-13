@@ -8,14 +8,14 @@ save_to_json_file(my_list, filename)
 filename = "my_dict.json"
 my_dict = { 
     'id': 12,
-    'name': "John",
-    'places': [ "San Francisco", "Tokyo" ],
+    'name': "Gabby",
+    'places': [ "Mombasa", "Kenya" ],
     'is_active': True,
     'info': {
         'age': 36,
         'average': 3.14
+        }
     }
-}
 save_to_json_file(my_dict, filename)
 
 try:
@@ -24,4 +24,3 @@ try:
     save_to_json_file(my_set, filename)
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
-

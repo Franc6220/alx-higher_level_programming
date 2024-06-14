@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # model_city.py
 
 from sqlalchemy import Column, Integer, String, ForeignKey

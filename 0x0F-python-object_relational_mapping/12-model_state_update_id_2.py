@@ -1,21 +1,44 @@
 #!/usr/bin/python3
-# Changes the name of the State object with id = 2 to
-# New Mexico in the database hbtn_0e_6_usa.
-# Usage: ./12-model_state_update_id_2.py <mysql username> /
-#                                        <mysql password> /
-#                                        <database name>
+"""
+12-model_state_update_id_2 module
+This script changes the name of the State object where id = 2 to "New Mexico".
+"""
+
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import State
+from model_state import Base, State
 
 if __name__ == "__main__":
-    engine = create_engine("mysql+mysqldb://{}:{}@localhost/{}"
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    # Retrieve command line arguments
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    database_name = sys.argv[3]
 
-    state = session.query(State).filter_by(id=2).first()
-    state.name = "New Mexico"
-    session.commit()
+    # Create engine to connect to MySQL server
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(mysql_username, mysql_password, database_name),
+                           pool_pre_ping=True)
+
+    # Bind the engine to the Base class
+    Base.metadata.bind = engine
+
+    # Create a session
+    DBSession = sessionmaker(bind=engine)
+    session = DBSession()
+
+    # Query the State object where id = 2
+    state_to_update = session.query(State).filter_by(id=2).first()
+
+    if state_to_update:
+        # Update the name attribute
+        state_to_update.name = "New Mexico"
+
+        # Commit the session to save the changes
+        session.commit()
+    else:
+        print("State with id = 2 not found")
+
+    # Close the session
+    session.close()
+
